@@ -1,0 +1,26 @@
+// VARIABLES
+    $bodyfont-family: freight-text-pro, serif;
+    $headingfont-family: franklin-gothic-urw, sans-serif;
+
+// VARIABLES
+    $color-text-body: #000000d9;
+    $color-accent: #fa0;
+    $color-midgrey: rgba(0,0,0,.5);
+    $color-links: #999;
+    $color-dark-links: #555;
+
+
+
+// Breakpoints
+$breakpoint-small: 768px;
+$breakpoint-medium: 1050px;
+$breakpoint-large: 1250px;
+
+//IMPORT PARTIALS
+@import "partials/toc";
+@import "partials/typography";
+@import "partials/buttons";
+@import "partials/media";
+@import "partials/layout";
+@import "partials/grid";
+@import "partials/structure";

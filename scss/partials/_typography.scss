@@ -1,0 +1,102 @@
+/* BODY */
+
+body {
+    font-family: $bodyfont-family;
+    font-size: 100%;
+    line-height: 1.4;
+    color: $color-text-body;
+}
+
+/* HEADINGs */
+
+h1, h2, h3 {
+    font-family: $headingfont-family;
+    margin: .5em 0;
+    font-weight: 400;
+}
+
+h1 {
+    font-size: 3em;
+    line-height: 1;
+}
+h2 {
+    font-size: 2em;
+    line-height: 1.1;
+}
+h3 {
+    font-size: 1.5em;
+    line-height: 1.2;
+}
+
+p {
+    max-width: 35em; 
+}
+
+/* LINKS */
+a {color: $color-links;}
+a:hover {color: $color-dark-links;}
+
+
+/* Horizontal Rules */
+.hr_ {
+    border: 0;
+    height: 1px;
+    background: rgba(0,0,0,.15);
+    margin: 4em 0;
+}
+
+/* Helper */
+.sectionhead {   
+    font-family: $bodyfont-family;
+    text-align: center;
+    font-size: 1em;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    margin-bottom: 1em;
+}
+
+.meta {
+    display: block;
+    font-size: .8em;
+    color: $color-midgrey;
+    margin: 0 0 2em 0;
+}
+
+  .sectionhead:after {
+    content: "";
+    border-bottom: 2px solid #ccc;
+    display: block;
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 1em;
+    margin-bottom: 3em;} //small
+// 
+// @media (min-width: $breakpoint-large) {
+// ._line h3 {
+//     text-align: center; }
+
+//   ._line:after {
+//     content: "";
+//     border-bottom: 4px solid rgb(194, 128, 30);
+//     display: block;
+//     width: 100px;
+//     display: flex;
+
+//     max-width: 100%; 
+// }
+// }
+
+/* TYPE SPECIMEN */
+.mainhead {
+    font-size: 6em;
+    color: $color-accent;
+    margin-bottom: 0;
+}
+
+.subhead {
+    font-family: $bodyfont-family;
+    color: $color-midgrey;
+    margin-bottom: 1em;
+}
+

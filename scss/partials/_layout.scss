@@ -1,0 +1,43 @@
+// Box Sizing
+   * {
+       box-sizing: border-box;
+   }
+   html,body {height: 100%;}
+
+// Reponsive type scalling per breakpoint
+// 14px on small screens (mobile)
+// 16px on medium screens (laptop)
+// 18px on large screens (desktop+)
+
+
+body {
+    font-size: 87.5%;
+    margin: 0;
+}
+
+.container {
+    padding: 0 4%;
+    margin: 0 auto;
+}
+
+@media (min-width: $breakpoint-small) {
+    body {
+        font-size: 100%; // 14px
+    }
+}
+
+@media (min-width: $breakpoint-medium) {
+   .container {
+        max-width: $breakpoint-medium;
+    }
+}
+
+@media (min-width: $breakpoint-large) {
+    body {
+        font-size: 112.5%; // 18px
+    }
+
+   .container {
+    max-width: $breakpoint-large;
+}
+}
