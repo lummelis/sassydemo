@@ -1,64 +1,130 @@
 /* site-header */
-.site-header, .site-footer {
-    background-color: $color-accent;
-    padding: 1em;
+.site-header,
+.site-footer {
+  background-color: $color-accent;
+  padding: 1em;
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+
+  h1 {
+    font-size: 1.5em;
+    font-family: $headingfont-family;
+    margin: 0.5em 0 0 0; /*to adjust baseline with nav text*/
+  }
+
+  a {
     color: #333;
-    display: flex;
-    justify-content: space-between;
-
-    h1 {
-        font-size: 1.5em;
-        font-family: $headingfont-family;
-        margin: .5em 0 0 0; /*to adjust baseline with nav text*/
-    }
-
-    a{
-        color: #333;
-        list-style: none;
-        text-decoration: none;
-    }
+    list-style: none;
+    text-decoration: none;
+  }
 }
 /* site-header */
 .site-header {
-    background-color: transparent;
-    position: absolute;
-    width: 100%;
+  background-color: transparent;
+  position: absolute;
+  width: 100%;
 }
 /*site-footer*/
 .site-footer {
-    justify-content: center;
-    margin-top: 6em;
+  justify-content: center;
+  margin-top: 6em;
 }
 
 /* site-navigation*/
 .site-nav {
-    ul{
-        margin: 0;
-        padding: 0;
-        list-style: none;
-        display: flex;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: grid;
+  place-items: center;
+  ul {
+    background: rgba(255, 0, 0, 0.5);
+    display: none;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  a {
+    display: block;
+    padding: 1em;
+  }
+  &.active {
+    height: 100%;
+    ul {
+      display: block;
     }
-    a {
-        display: block;
-        padding: 1em;
-    }
+    // top: 0;
+  }
 }
-section {
-    padding: 6em 0;
-    min-height: 100vh;
-    display: grid;
-    place-items: center;
+
+/* Menu Button */
+.menu-button {
+  position: absolute;
+  top: 2em;
+  right: 2em;
+  cursor: pointer;
+}
+pointer section {
+  padding: 6em 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
 }
 .hero {
-    //background-image: url('https://picsum.photos/id/1019/1600/1200');
-    //background-size: cover;
-    background-color: $color-accent;
-    opacity: .3;
-    padding: 6em 1em;
-    text-align: center;
+  //background-image: url('https://picsum.photos/id/1019/1600/1200');
+  //background-size: cover;
+  background-color: $color-accent;
+  //opacity: .3;
+  padding: 6em 1em;
+  text-align: center;
 
-    p {
-        margin-left: auto;
-        margin-right: auto;
-    }
+  p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  h2 {
+    font-size: 4em;
+    margin: 0;
+  }
 }
+/* Layout section */
+
+.split-crossed-left {
+  @media (min-width: $breakpoint-small) {
+    .container {
+      display: flex;
+      align-items: center;
+    }
+
+    .image-block {
+      width: 50%;
+    }
+
+    .text-block {
+      width: 50%;
+      transform: translateX(-2em);
+    }
+  }
+}
+
+.split-crossed-right {
+  @media (min-width: $breakpoint-small) {
+    .container {
+      display: flex;
+      align-items: center;
+      flex-direction: row-reverse;
+    }
+
+    .image-block {
+      width: 50%;
+    }
+
+    .text-block {
+      width: 50%;
+      transform: translateX(2em);
+    }
+  }
+}
+

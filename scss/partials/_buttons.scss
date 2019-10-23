@@ -8,11 +8,12 @@ button,
     font-size: inherit;
     color: #fff;
     display: inline-block;
-    padding: 1em;
+    padding: 1em 2em;
     margin: .5em;
     border: 1px solid $color-links;
     border-radius: .5em;
     cursor: pointer;
+    text-decoration: none;
 
     &:hover {
         background-color: $color-dark-links;
@@ -29,6 +30,15 @@ button,
             color: #fff; 
             border-color: $color-dark-links;
         }
+    }
+    &.dark {
+        color: #fff;
+        background-color: transparent; 
+        border-color: #fff;
 
+        &:hover {
+            background-color: #fff;
+            color: #333; 
+        }
     }
 }
