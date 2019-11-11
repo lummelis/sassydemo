@@ -23,7 +23,7 @@
     </div>
 
     <nav class="site-nav">
-      <div class="menu-button">Menu</div>
+      <div class="menu-button navicon">menu</div>
       <ul>
         <li><a href="#top">home</a></li>
         <li><a href="#typography">Typography</a></li>
@@ -43,7 +43,7 @@
     </div>
   </section>
 
-  <section id="typography">
+  <section id="typography" data-scroll="out">
     <div class="container">
       <h1 class="mainhead">Headline Title</h1>
       <h2 class="subhead">This is a subheader.</h2>
@@ -62,7 +62,7 @@
       <a class="button alt">This is a alt button link</a>
     </div>
   </section>
-  <section id="layout" class="split-cross-left">
+  <section id="layout" class="split-crossed-left" data-scroll="out">
     <div class="container">
       <div class="img-block">
         <img src="https://via.placeholder.com/1500" alt="placeholderImage" />
@@ -79,7 +79,7 @@
     </div>
   </section>
 
-  <section class="split-cross-right">
+  <section class="split-crossed-right">
     <div class="container">
       <div class="img-block">
         <img src="https://via.placeholder.com/1500" alt="placeholderImage" />
@@ -105,10 +105,20 @@
       </ul>
     </nav>
   </footer>
-  <!-- Smooth Scroll JS -->
+  <!-- SMOOTH SCROLL JS -->
   <script src="js/smooth-scroll.polyfills.min.js"></script>
   <script>
     var scroll = new SmoothScroll('a[href*="#"]');
+  </script>
+
+  <!-- SCROLL OUT SCROLL TRIGGERED ANIMATION -->
+  <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
+  <script>
+    ScrollOut(
+      {
+        threshold: 0.4
+      }
+    );
   </script>
 
   <!-- Main JS-->
